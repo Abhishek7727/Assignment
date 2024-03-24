@@ -58,6 +58,8 @@
           "bundleName": "com.project1.i18n.i18n"
         }
         
+      }, "oModel" : {
+        "type": "sap.ui.model.json.JSONModel"
       }
     },
     "resources": {

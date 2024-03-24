@@ -1,8 +1,135 @@
-.sapUiSizeCompact .sapMPageWithHeader>section {
-    border: 2px solid #686262;
-    padding: 19px 28px 18px 28px;
-    background-color: white;
-    width: 40%;
-    margin: auto;
-    height: 90%;
+/* Enter your custom styles here */
+.txt{
+    color:red;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.img{
+    height: 20px;
+    width: 25px;
+}
+
+.vbox{
+    text-align: center;
+    width:40%;
+    margin-left: 30%;
+    background-color: red;
+    padding: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: 1s ease-out;
+}
+.vbox:hover{
+    background-color: rgb(206, 0, 0);
+    transition: 1s ease-in;
+}
+
+.txt1{
+    font-size: 25px;
+    color:#650f0f;
+    cursor: pointer;
+}
+
+.txt2{
+    color:#ffffff;
+    cursor: pointer;
+}
+
+.btn{
+    font-size: 600px;
+    
+}
+
+.hbox{
+    margin-top: 20px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.vbox1{
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    width:50%;
+    height:100px;
+    background-color: #ffffff;
+    color:red;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: 1s ease-out;
+    /* padding-top: 40px;
+    padding-left: 200px; */
+}
+
+.vbox1:hover{
+    background-color: #ffdddd;
+    transition: 1s ease-in;
+}
+
+.txt3{
+    color:red;
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.hbox1{
+    width:100%;
+    /* border-radius: 20px; */
+    background-color: red;
+    height:30%;
+}
+
+.txt4{
+    margin-top: 20px;
+    margin-left: 50px;
+    text-decoration: underline;
+}
+
+.hbox2{
+    margin: 10px;
+    width: 98.5%;
+    height:300%;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.txt5{
+    color:red;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.txt6{
+    margin-left: 50px;
+}
+
+.vbox3{
+    margin-top: 15px;
+    margin-left: 1200px;
+    height: 30px;
+    width: 100px;
+    background-color: red;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: 1s ease-out;
+}
+
+.vbox3:hover{
+    background-color: rgb(206, 0, 0);
+    transition: 1s ease-in;
+}
+
+.txt7{
+    cursor: pointer;
+    color: #ffffff;
 }

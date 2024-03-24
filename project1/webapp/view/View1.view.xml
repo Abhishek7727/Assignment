@@ -1,155 +1,182 @@
 <mvc:View
-    xmlns:cards="sap.f.cards"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
     controllerName="com.project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
-    xmlns:f="sap.ui.layout.form"
     xmlns:l="sap.ui.layout"
-    xmlns:core="sap.ui.core"
 >
     <Page
         id="page"
-        title="{i18n>title}"
+        title=""
     >
         <content>
-            <VBox id="_IDGenVBox1">
-                <Label
-                    id="1"
-                    text="Registration Form"
-                    design="Bold"
+            <Bar>
+                <contentMiddle>
+                    <!-- <core:Icon src="sap-icon://car-rental"></core:Icon> -->
+                    <!-- <Button id="idBtnHideShow" icon="sap-icon://car-rental" type="Reject" /> -->
+                    <Image
+                        class="img"
+                        src="../images/logotoyota-removebg-preview.png"
+                    />
+                    <Text
+                        text="TOYOTA"
+                        class="txt"
+                    />
+                </contentMiddle>
+                <contentRight>
+                    <Button
+                        icon="sap-icon://search"
+                        text=""
+                        press="onRegister"
+                        type="Reject"
+                    />
+                    <Button
+                        icon="sap-icon://bell-2"
+                        text=""
+                        press="onRegister"
+                        type="Reject"
+                    />
+                </contentRight>
+                <contentLeft>
+                    <Button
+                        icon="sap-icon://menu"
+                        text=""
+                        press="onRegister"
+                        type="Reject"
+                    />
+                </contentLeft>
+            </Bar>
+
+            <Carousel
+                loop="true"
+                width="100%"
+            >
+                <Image src="../images/t2.jpg" />
+                <Image src="../images/toyat-1.jpg" />
+                <Image src="../images/toyota2.jpeg" />
+            </Carousel>
+
+            <VBox class="vbox">
+                <Text
+                    text="Book a Service"
+                    class="txt1"
                 />
-                <HBox>
-                    <Label
-                        id="_IDGenLabel1"
-                        text="First Name:"
-                        design="Bold"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <Input
-                        id="_IDGenInput1"
-                        value="{/fname}"
-                        placeholder="Enter your Firstname"
+                <!-- <Button text="Book a Service"  type="Transparent"/> -->
+            </VBox>
+
+            <HBox class="hbox">
+                <HBox class="vbox1">
+                    <core:Icon src="sap-icon://multiselect-all" />
+                    <Text
+                        text="View Service Status"
+                        class="txt3"
                     />
                 </HBox>
-                <HBox>
-                    <Label
-                        id="_IDGenLabel5"
-                        text="Last Name:"
-                        design="Bold"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <Input
-                        id="_IDGenInput5"
-                        value="{/lname}"
-                        placeholder="Enter your Lastname"
+                <HBox class="vbox1">
+                    <core:Icon src="sap-icon://multiselect-all" />
+                    <Text
+                        text="View Service Status"
+                        class="txt3"
                     />
                 </HBox>
-                <HBox>
-                    <Label
-                        id="_IDGenLabel8"
-                        text="Email:"
-                        design="Bold"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <Input
-                        id="_IDGenInput8"
-                        value="{/email}"
-                        placeholder="Enter your Email"
-                    />
-                </HBox>
-                <HBox>
-                    <Label
-                        id="_IDGenLabel2"
-                        text="Gender"
-                        design="Bold"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <RadioButtonGroup
-                        id="_IDGenRadioButtonGroup1"
-                        columns="3"
-                        selectedIndex="{/satisfaction}"
-                    >
-                        <buttons>
-                            <RadioButton
-                                id="_IDGenRadioButton1"
-                                text="Male"
-                            />
-                            <RadioButton
-                                id="_IDGenRadioButton2"
-                                text="Female"
-                            />
-                            <RadioButton
-                                id="_IDGenRadioButton3"
-                                text="LGBTQ"
-                            />
-                        </buttons>
-                    </RadioButtonGroup>
-                </HBox>
-                <HBox>
-                    <Label
-                        id="_IDGenLabel6"
-                        text="DOB: "
-                        design="Bold"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <DatePicker
-                        value="{/date}"
-                        placeholder="Your Date of Birth"
-                    />
-                </HBox>
-                <HBox>
-                    <Label
-                        id="_IDGenLabel7"
-                        text="Domain: "
-                        design="Bold"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <ComboBox
-                        items="{
-				                        	path: '/domains',
-		                        			sorter: { path: 'text' }
-			                            	}"
-                        selectedKey="{/selectedDomain}"
-                    >
-                        <core:Item
-                            key="{key}"
-                            text="{text}"
+            </HBox>
+
+            <VBox class="hbox1">
+                <HBox class="hbox2">
+                    <VBox>
+                        <Text
+                            text="Recommended for you"
+                            class="txt4"
                         />
-                    </ComboBox>
-                </HBox>
+                        <HBox>
+                            <VBox>
+                                <Text
+                                    text="Camry"
+                                    class="txt5"
+                                />
+                                <Text
+                                    text="General job"
+                                    class="txt6"
+                                />
+                            </VBox>
 
-                <HBox>
-                    <Label
-                        id="_IDGenLabel3"
-                        text="Skills"
-                        design="Bold"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <CheckBox
-                        id="_IDGenCheckBox1"
-                        text="SAP"
-                        selected="{/products/A}"
-                    />
-                    <CheckBox
-                        id="_IDGenCheckBox2"
-                        text="Web"
-                        selected="{/products/B}"
-                    />
-                    <CheckBox
-                        id="_IDGenCheckBox3"
-                        text="ML"
-                        selected="{/products/C}"
-                    />
-                </HBox>
+                            <VBox class="vbox3">
+                                <Text
+                                    text="Quick Book"
+                                    class="txt7"
+                                />
+                            </VBox>
+                        </HBox>
+                        <HBox>
+                            <VBox>
+                                <Text
+                                    text="Supra"
+                                    class="txt5"
+                                />
+                                <Text
+                                    text="General job"
+                                    class="txt6"
+                                />
+                            </VBox>
 
-                <Button
-                    id="_IDGenButton1"
-                    text="Submit"
-                    press="onSubmit"
-                    type="Success"
-                />
+                            <VBox class="vbox3">
+                                <Text
+                                    text="Quick Book"
+                                    class="txt7"
+                                />
+                            </VBox>
+                        </HBox>
+                    </VBox>
+                </HBox>
             </VBox>
         </content>
+
+        <footer>
+            <Bar>
+                <contentMiddle>
+                    <Button
+                        xmlns:mvc="sap.ui.core.mvc"
+                        xmlns:core="sap.ui.core"
+                        xmlns="sap.m"
+                        text="Vehicle"
+                        id="button0_copy"
+                        icon="sap-icon://vehicle-repair"
+                        type="Reject"
+                    />
+
+                    <Text
+                        text="tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"
+                        class="txt2"
+                    />
+                    <Button
+                        text="Product"
+                        icon="sap-icon://product"
+                        type="Reject"
+                    />
+                </contentMiddle>
+                <contentRight>
+                    <Button
+                        xmlns:mvc="sap.ui.core.mvc"
+                        xmlns:core="sap.ui.core"
+                        xmlns="sap.m"
+                        text="More"
+                        id="button0_copy3"
+                        icon="sap-icon://horizontal-grip"
+                        type="Reject"
+                    />
+                </contentRight>
+                <contentLeft>
+                    <Button
+                        icon="sap-icon://home"
+                        text="Home"
+                        press="onRegister"
+                        type="Reject"
+                    />
+                </contentLeft>
+            </Bar>
+        </footer>
     </Page>
 </mvc:View>
