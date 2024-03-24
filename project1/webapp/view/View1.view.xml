@@ -1,0 +1,72 @@
+<mvc:View controllerName="com.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page
+        id="page"
+        title="List"
+        class="changeProp"
+        
+    >
+    <Panel   class="sapUiLargeMargin  changeProp" 
+                    width="auto"
+                    >
+        <content >
+            <VBox >
+                <HBox
+                    class="sapUiTinyMargin"
+                    alignContent="Center"
+                    alignItems="Center"
+                    width="100%"
+                >
+                    <Label
+                        text="Discount (%)"
+                        class="sapUiSmallMarginEnd"
+                    />
+                    <Input value="{discountModel>/discount}" />
+
+                    <Button
+                        type="Success"
+                        press="onDiscountChange"
+                        text="Apply"
+                        class="sapUiSmallMarginBegin"
+                    />
+                </HBox> 
+                <Label
+                    text="Discounted Price"
+                    textAlign="Right"
+                    width="60%"
+                    design="Bold"
+                />
+                <List items="{salesModel>/aSales}" width="60%"  class="changeProp">
+                    <ObjectListItem
+                        title="{salesModel>ProductName}"
+                        number="{= ${salesModel>UnitPrice} - (${salesModel>UnitPrice} * (${discountModel>/discount} / 100)) }"
+                        numberUnit="EUR"
+                        numberState="{= ${salesModel>UnitPrice} - (${salesModel>UnitPrice} * (${discountModel>/discount} / 100)) > 90 ? 'Warning' : 'Success'}"
+                    >
+                        <attributes>
+                             <ObjectAttribute
+                                title="Base Price"
+                                text="{salesModel>UnitPrice}"
+                            />
+                            <ObjectAttribute
+                                title="Quantity"
+                                text="{salesModel>Quantity}"
+                            />
+                            <ObjectAttribute
+                                title="Order Date"
+                                text="{salesModel>ShippedDate}"
+                            />
+                            <ObjectAttribute
+                                title="Status"
+                                text="{salesModel>Status}"
+                            />
+                             
+                        </attributes>
+                    </ObjectListItem>
+                </List>
+            </VBox>
+        </content>
+        </Panel>
+    </Page>
+</mvc:View>
