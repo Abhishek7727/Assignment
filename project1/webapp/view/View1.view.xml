@@ -1,72 +1,182 @@
-<mvc:View controllerName="com.project1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    controllerName="com.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+>
     <Page
         id="page"
-        title="List"
-        class="changeProp"
-        
+        title=""
     >
-    <Panel   class="sapUiLargeMargin  changeProp" 
-                    width="auto"
-                    >
-        <content >
-            <VBox >
-                <HBox
-                    class="sapUiTinyMargin"
-                    alignContent="Center"
-                    alignItems="Center"
-                    width="100%"
-                >
-                    <Label
-                        text="Discount (%)"
-                        class="sapUiSmallMarginEnd"
+        <content>
+            <Bar>
+                <contentMiddle>
+                    <!-- <core:Icon src="sap-icon://car-rental"></core:Icon> -->
+                    <!-- <Button id="idBtnHideShow" icon="sap-icon://car-rental" type="Reject" /> -->
+                    <Image
+                        class="img"
+                        src="../images/logotoyota-removebg-preview.png"
                     />
-                    <Input value="{discountModel>/discount}" />
-
+                    <Text
+                        text="TOYOTA"
+                        class="txt"
+                    />
+                </contentMiddle>
+                <contentRight>
                     <Button
-                        type="Success"
-                        press="onDiscountChange"
-                        text="Apply"
-                        class="sapUiSmallMarginBegin"
+                        icon="sap-icon://search"
+                        text=""
+                        press="onRegister"
+                        type="Reject"
                     />
-                </HBox> 
-                <Label
-                    text="Discounted Price"
-                    textAlign="Right"
-                    width="60%"
-                    design="Bold"
+                    <Button
+                        icon="sap-icon://bell-2"
+                        text=""
+                        press="onRegister"
+                        type="Reject"
+                    />
+                </contentRight>
+                <contentLeft>
+                    <Button
+                        icon="sap-icon://menu"
+                        text=""
+                        press="onRegister"
+                        type="Reject"
+                    />
+                </contentLeft>
+            </Bar>
+
+            <Carousel
+                loop="true"
+                width="100%"
+            >
+                <Image src="../images/t2.jpg" />
+                <Image src="../images/toyat-1.jpg" />
+                <Image src="../images/toyota2.jpeg" />
+            </Carousel>
+
+            <VBox class="vbox">
+                <Text
+                    text="Book a Service"
+                    class="txt1"
                 />
-                <List items="{salesModel>/aSales}" width="60%"  class="changeProp">
-                    <ObjectListItem
-                        title="{salesModel>ProductName}"
-                        number="{= ${salesModel>UnitPrice} - (${salesModel>UnitPrice} * (${discountModel>/discount} / 100)) }"
-                        numberUnit="EUR"
-                        numberState="{= ${salesModel>UnitPrice} - (${salesModel>UnitPrice} * (${discountModel>/discount} / 100)) > 90 ? 'Warning' : 'Success'}"
-                    >
-                        <attributes>
-                             <ObjectAttribute
-                                title="Base Price"
-                                text="{salesModel>UnitPrice}"
-                            />
-                            <ObjectAttribute
-                                title="Quantity"
-                                text="{salesModel>Quantity}"
-                            />
-                            <ObjectAttribute
-                                title="Order Date"
-                                text="{salesModel>ShippedDate}"
-                            />
-                            <ObjectAttribute
-                                title="Status"
-                                text="{salesModel>Status}"
-                            />
-                             
-                        </attributes>
-                    </ObjectListItem>
-                </List>
+                <!-- <Button text="Book a Service"  type="Transparent"/> -->
+            </VBox>
+
+            <HBox class="hbox">
+                <HBox class="vbox1">
+                    <core:Icon src="sap-icon://multiselect-all" />
+                    <Text
+                        text="View Service Status"
+                        class="txt3"
+                    />
+                </HBox>
+                <HBox class="vbox1">
+                    <core:Icon src="sap-icon://multiselect-all" />
+                    <Text
+                        text="View Service Status"
+                        class="txt3"
+                    />
+                </HBox>
+            </HBox>
+
+            <VBox class="hbox1">
+                <HBox class="hbox2">
+                    <VBox>
+                        <Text
+                            text="Recommended for you"
+                            class="txt4"
+                        />
+                        <HBox>
+                            <VBox>
+                                <Text
+                                    text="Camry"
+                                    class="txt5"
+                                />
+                                <Text
+                                    text="General job"
+                                    class="txt6"
+                                />
+                            </VBox>
+
+                            <VBox class="vbox3">
+                                <Text
+                                    text="Quick Book"
+                                    class="txt7"
+                                />
+                            </VBox>
+                        </HBox>
+                        <HBox>
+                            <VBox>
+                                <Text
+                                    text="Supra"
+                                    class="txt5"
+                                />
+                                <Text
+                                    text="General job"
+                                    class="txt6"
+                                />
+                            </VBox>
+
+                            <VBox class="vbox3">
+                                <Text
+                                    text="Quick Book"
+                                    class="txt7"
+                                />
+                            </VBox>
+                        </HBox>
+                    </VBox>
+                </HBox>
             </VBox>
         </content>
-        </Panel>
+
+        <footer>
+            <Bar>
+                <contentMiddle>
+                    <Button
+                        xmlns:mvc="sap.ui.core.mvc"
+                        xmlns:core="sap.ui.core"
+                        xmlns="sap.m"
+                        text="Vehicle"
+                        id="button0_copy"
+                        icon="sap-icon://vehicle-repair"
+                        type="Reject"
+                    />
+
+                    <Text
+                        text="tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"
+                        class="txt2"
+                    />
+                    <Button
+                        text="Product"
+                        icon="sap-icon://product"
+                        type="Reject"
+                    />
+                </contentMiddle>
+                <contentRight>
+                    <Button
+                        xmlns:mvc="sap.ui.core.mvc"
+                        xmlns:core="sap.ui.core"
+                        xmlns="sap.m"
+                        text="More"
+                        id="button0_copy3"
+                        icon="sap-icon://horizontal-grip"
+                        type="Reject"
+                    />
+                </contentRight>
+                <contentLeft>
+                    <Button
+                        icon="sap-icon://home"
+                        text="Home"
+                        press="onRegister"
+                        type="Reject"
+                    />
+                </contentLeft>
+            </Bar>
+        </footer>
     </Page>
 </mvc:View>
