@@ -1,5 +1,8 @@
-/* Enter your custom styles here */
-.changeProp{
-    background-color: rgb(56, 108, 113);
-
+.sapUiSizeCompact .sapMPageWithHeader>section {
+    border: 2px solid #686262;
+    padding: 19px 28px 18px 28px;
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    height: 90%;
 }

@@ -57,6 +57,7 @@
         "settings": {
           "bundleName": "com.project1.i18n.i18n"
         }
+        
       }
     },
     "resources": {
